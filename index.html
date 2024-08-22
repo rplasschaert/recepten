@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Recepten</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-</style>
 <body>
-<ul>Recepten:
-</ul>
+    <header>
+        <h1>Recipe Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#add-recipe">Add Recipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Recipe Collection</h2>
+            <p>Discover a wide variety of delicious recipes!</p>
+        </section>
+
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <div class="recipe-list">
+                <!-- Example Recipe Card -->
+                <div class="recipe-card">
+                    <h3>Spaghetti Bolognese</h3>
+                    <p>A classic Italian pasta dish.</p>
+                    <button>View Recipe</button>
+                </div>
+                <!-- Additional recipes can be added here -->
+            </div>
+        </section>
+
+        <section id="add-recipe">
+            <h2>Add a New Recipe</h2>
+            <form>
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" name="recipe-name" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="5" required></textarea>
+
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+    </main>
+
 </body>
 </html>
