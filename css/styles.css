@@ -120,6 +120,46 @@ form button:hover {
     background-color: #45a049;
 }
 
+/* Recipe details section styling */
+.hidden {
+    display: none;
+}
+
+#recipe-details {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-details h2 {
+    margin-bottom: 15px;
+}
+
+#ingredient-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+#ingredient-list li {
+    margin-bottom: 10px;
+}
+
+#back-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#back-button:hover {
+    background-color: #45a049;
+}
+
 /* Footer styling */
 footer {
     background-color: #4CAF50;
@@ -129,4 +169,24 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+/* Wake Lock Button Styling */
+#wake-lock-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+#wake-lock-button:hover {
+    background-color: #45a049;
+}
+
+#wake-lock-status {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
 }
