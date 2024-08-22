@@ -13,7 +13,6 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#recipes">Recipes</a></li>
-                <li><a href="#add-recipe">Add Recipe</a></li>
             </ul>
         </nav>
     </header>
@@ -36,21 +35,29 @@
                     <button class="view-recipe" data-recipe="spaghetti-bolognese">View Recipe</button>
 
                 </div>
-                <!-- Additional recipes can be added here -->
+				<div class="recipe-card">
+                    <h3>Kung Pao Chicken</h3>
+                    <p>Kung Pao chicken, a classic Chinese takeout dish of stir-fried chicken, peanuts, and vegetables, is easy to make at home. </p>
+					<button class="view-recipe" data-recipe="kung-pao-chicken">View Recipe</button>
+				</div>
             </div>
         </section>
 
         <!-- Detailed Recipe View (initially hidden) -->
-        <section id="recipe-details" class="hidden">
-            <h2 id="recipe-title">Recipe Title</h2>
-            <h3>Ingredients</h3>
-            <ul id="ingredient-list">
-                <!-- Ingredient checklist items will be populated here -->
-            </ul>
-            <h3>Instructions</h3>
-            <p id="recipe-instructions">Recipe instructions will be shown here.</p>
-            <button id="back-button">Back to Recipes</button>
-        </section>
+		<section id="recipe-details" class="hidden">
+			<h2 id="recipe-title">Recipe Title</h2>
+			
+			<!-- Recipe Image -->
+			<img id="recipe-image" src="" alt="Recipe Image" class="recipe-image hidden">
+
+			<h3>Ingredients</h3>
+			<ul id="ingredient-list">
+				<!-- Ingredient checklist items will be populated here -->
+			</ul>
+			<h3>Instructions</h3>
+			<p id="recipe-instructions">Recipe instructions will be shown here.</p>
+			<button id="back-button">Back to Recipes</button>
+		</section>
 
     </main>
 
