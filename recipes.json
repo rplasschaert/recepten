@@ -1,0 +1,38 @@
+{
+    "spaghetti-bolognese": {
+        "title": "Spaghetti Bolognese",
+        "image": "",
+        "ingredients": [
+            "200g spaghetti",
+            "100g rundergehakt",
+            "1 ui, gesnipperd",
+            "2 teentjes knoflook, gehakt",
+            "400g tomaten uit blik",
+            "Zout en peper naar smaak"
+        ],
+        "instructions": "Kook de spaghetti volgens de instructies op de verpakking. Bak het gehakt in een pan tot het bruin is. Voeg de gesnipperde ui en knoflook toe en bak tot ze zacht zijn. Voeg de tomaten uit blik toe en laat 15 minuten sudderen. Breng op smaak met zout en peper. Serveer de saus over de spaghetti."
+    },
+    "kung-pao-chicken": {
+        "title": "Kung Pao Kip",
+        "image": "https://www.onceuponachef.com/images/2022/01/Kung-Pao-Chicken-scaled.jpg",
+        "ingredients": [
+            "1½ pond kipfilet zonder bot en vel",
+            "1 eetlepel Shaoxing-wijn, droge sherry of rijstwijn",
+            "2 theelepels sojasaus",
+            "2 theelepels maïzena",
+            "½ theelepel koosjer zout",
+            "¼ theelepel witte peper",
+            "2 eetlepels plantaardige olie",
+            "8 gedroogde rode pepers, bij voorkeur Sichuan",
+            "1 eetlepel Sichuan-peperkorrels (optioneel)",
+            "1 rode paprika, in stukken van 1 inch gesneden",
+            "1 groene paprika, in stukken van 1 inch gesneden",
+            "3 teentjes knoflook, gehakt",
+            "1 eetlepel verse gember, fijngehakt",
+            "6 bosuitjes, witte en groene delen gescheiden en in stukken van 1 inch gesneden",
+            "½ kopje ongezouten geroosterde pinda's",
+            "Gekookte witte rijst, om te serveren"
+        ],
+        "instructions": "Snijd de kip in hapklare stukken. Meng in een middelgrote kom de kip, Shaoxing-wijn, sojasaus, maïzena, koosjer zout en witte peper. Meng goed en laat minstens 15 minuten marineren. Meng in een kleine kom de sojasaus, suiker, zwarte azijn, hoisinsaus, sesamolie en maïzena. Zet opzij. Verhit een wok of grote antiaanbakpan op hoog vuur. Voeg 1 eetlepel olie toe en draai om te coaten. Voeg de helft van de kip in een enkele laag toe en bak tot ze bruin zijn, ongeveer 2 minuten per kant. Breng de kip over naar een bord en herhaal met de resterende kip. Voeg de resterende eetlepel olie toe aan de wok, voeg dan de gedroogde pepers en Sichuan-peperkorrels (indien gebruikt) toe. Roerbak tot de pepers beginnen te verkleuren, ongeveer 30 seconden. Voeg de paprika's toe en roerbak 2 minuten. Voeg de knoflook, gember en witte delen van de bosuitjes toe en roerbak tot ze geurig zijn, ongeveer 30 seconden. Voeg de kip terug toe aan de wok, voeg dan de saus toe en roer tot de kip en groenten gelijkmatig bedekt zijn. Roer de pinda's en de groene delen van de bosuitjes erdoor en serveer de Kung Pao Kip heet over gekookte witte rijst."
+    }
+}

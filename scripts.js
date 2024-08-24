@@ -1,27 +1,24 @@
-
-$(document).ready(function(){
- // Example recipe data
-        const recipes = {
-            "spaghetti-bolognese": {
-                title: "Spaghetti Bolognese",
-                ingredients: [
-                    "200g spaghetti",
-                    "100g minced beef",
-                    "1 onion, chopped",
-                    "2 garlic cloves, minced",
-                    "400g canned tomatoes",
-                    "Salt and pepper to taste"
-                ],
-                instructions: "Cook the spaghetti according to the package instructions. In a pan, cook the minced beef until browned. Add the chopped onion and garlic, and cook until soft. Pour in the canned tomatoes and simmer for 15 minutes. Season with salt and pepper. Serve the sauce over the spaghetti."
-            }
-        };
-
+// Fetch recipe data from the JSON file
+fetch('recipes.json')
+    .then(response => response.json())
+    .then(recipes => {
+        // Event listeners for "View Recipe" buttons
         document.querySelectorAll('.view-recipe').forEach(button => {
             button.addEventListener('click', function() {
                 const recipeKey = this.dataset.recipe;
                 const recipe = recipes[recipeKey];
 
                 document.getElementById('recipe-title').innerText = recipe.title;
+                
+                // Set the recipe image
+                const recipeImage = document.getElementById('recipe-image');
+                if (recipe.image) {
+                    recipeImage.src = recipe.image;
+                    recipeImage.classList.remove('hidden');
+                } else {
+                    recipeImage.classList.add('hidden');
+                }
+
                 const ingredientList = document.getElementById('ingredient-list');
                 ingredientList.innerHTML = '';
 
@@ -42,8 +39,9 @@ $(document).ready(function(){
             });
         });
 
+        // Event listener for "Back to Recipes" button
         document.getElementById('back-button').addEventListener('click', function() {
             document.getElementById('recipes').classList.remove('hidden');
             document.getElementById('recipe-details').classList.add('hidden');
         });
-});
+    });
