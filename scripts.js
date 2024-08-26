@@ -9,7 +9,7 @@ fetch('recipes.json')
                 const recipe = recipes[recipeKey];
 
                 document.getElementById('recipe-title').innerText = recipe.title;
-                
+
                 // Set the recipe image
                 const recipeImage = document.getElementById('recipe-image');
                 if (recipe.image) {
@@ -32,7 +32,14 @@ fetch('recipes.json')
                     ingredientList.appendChild(listItem);
                 });
 
-                document.getElementById('recipe-instructions').innerText = recipe.instructions;
+                const instructionList = document.getElementById('instruction-list');
+                instructionList.innerHTML = '';
+
+                recipe.instructions.forEach((instruction, index) => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${index + 1}. ${instruction}`;
+                    instructionList.appendChild(listItem);
+                });
 
                 document.getElementById('recipes').classList.add('hidden');
                 document.getElementById('recipe-details').classList.remove('hidden');
