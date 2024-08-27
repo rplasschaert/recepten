@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 data.forEach(recipe => {
                     const recipeLink = document.createElement('a');
-                    recipeLink.href = `recepten/${recipe.name.toLowerCase().replace(/ /g, '-')}.html`;
+                    recipeLink.href = `recepten/${encodeURIComponent(recipe.name.toLowerCase().replace(/ /g, '-') + '.html')}`;
                     recipeLink.classList.add('recept-link');
-                    recipeLink.textContent = recipe.name;
-                    recipeLink.dataset.ingredients = recipe.ingredients.join(', ').toLowerCase();
+                    recipeLink.textContent = sanitizeString(recipe.name);
+                    recipeLink.dataset.ingredients = sanitizeString(recipe.ingredients.join(', ').toLowerCase());
                     receptenLijst.appendChild(recipeLink);
                 });
             })
@@ -21,10 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadRecipes();
 
+    // Function to sanitize strings to prevent XSS
+    function sanitizeString(str) {
+        const textarea = document.createElement('textarea');
+        textarea.textContent = str;
+        return textarea.innerHTML;
+    }
+
     // Zoekfunctionaliteit voor ingrediënten
     if (zoekBalk) {
         zoekBalk.addEventListener('input', function () {
-            const zoekTerm = this.value.toLowerCase();
+            const zoekTerm = sanitizeString(this.value.toLowerCase());
             const links = document.querySelectorAll('.recept-link');
             
             links.forEach(link => {
