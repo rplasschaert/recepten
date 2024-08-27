@@ -23,15 +23,17 @@ fetch('recipes.json')
                 ingredientList.innerHTML = '';
 
                 recipe.ingredients.forEach(ingredient => {
+                    
                     const listItem = document.createElement('li');
                     const checkbox = document.createElement('input');
+                    
                     checkbox.type = 'checkbox';
                     checkbox.name = 'ingredient';
-                    listItem.appendChild(checkbox);
+                    //listItem.appendChild(checkbox);
                     listItem.appendChild(document.createTextNode(' ' + ingredient));
                     ingredientList.appendChild(listItem);
                 });
-// a
+
                 const instructionList = document.getElementById('instruction-list');
                 instructionList.innerHTML = '';
 
@@ -52,3 +54,41 @@ fetch('recipes.json')
             document.getElementById('recipe-details').classList.add('hidden');
         });
     });
+
+    let wakeLock = null;
+const wakeLockButton = document.getElementById('wake-lock-button');
+const wakeLockStatus = document.getElementById('wake-lock-status');
+
+// Function to request the wake lock
+async function requestWakeLock() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLockStatus.textContent = 'Schermuitschakeling is momenteel voorkomen.';
+        wakeLockButton.textContent = 'Sta schermuitschakeling toe';
+        
+        wakeLock.addEventListener('release', () => {
+            wakeLockStatus.textContent = 'Schermuitschakeling is momenteel toegestaan.';
+            wakeLockButton.textContent = 'Voorkom schermuitschakeling';
+        });
+    } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+    }
+}
+
+// Function to release the wake lock
+function releaseWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+            wakeLock = null;
+        });
+    }
+}
+
+// Toggle wake lock on button click
+wakeLockButton.addEventListener('click', () => {
+    if (wakeLock === null) {
+        requestWakeLock();
+    } else {
+        releaseWakeLock();
+    }
+});

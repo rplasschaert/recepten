@@ -1,43 +1,46 @@
 {
     "spaghetti-bolognese": {
-        "title": "Spaghetti Bolognese",
+        "title": "",
         "image": "",
         "ingredients": [
-            "200g spaghetti",
-            "100g rundergehakt",
-            "1 ui, gesnipperd",
-            "2 teentjes knoflook, gehakt",
-            "400g tomaten uit blik",
-            "Zout en peper naar smaak"
+            ""
         ],
-        "instructions": "Kook de spaghetti volgens de instructies op de verpakking. Bak het gehakt in een pan tot het bruin is. Voeg de gesnipperde ui en knoflook toe en bak tot ze zacht zijn. Voeg de tomaten uit blik toe en laat 15 minuten sudderen. Breng op smaak met zout en peper. Serveer de saus over de spaghetti."
+        "instructions": [""
+    ]
     },
     "kung-pao-chicken": {
         "title": "Kung Pao Kip",
         "image": "https://www.onceuponachef.com/images/2022/01/Kung-Pao-Chicken-scaled.jpg",
         "ingredients": [
-            "1½ pond kipfilet zonder bot en vel",
-            "1 eetlepel Shaoxing-wijn, droge sherry of rijstwijn",
-            "2 theelepels sojasaus",
-            "2 theelepels maïzena",
-            "½ theelepel koosjer zout",
-            "¼ theelepel witte peper",
-            "2 eetlepels plantaardige olie",
-            "8 gedroogde rode pepers, bij voorkeur Sichuan",
-            "1 eetlepel Sichuan-peperkorrels (optioneel)",
-            "1 rode paprika, in stukken van 1 inch gesneden",
-            "1 groene paprika, in stukken van 1 inch gesneden",
-            "3 teentjes knoflook, gehakt",
-            "1 eetlepel verse gember, fijngehakt",
-            "6 bosuitjes, witte en groene delen gescheiden en in stukken van 1 inch gesneden",
-            "½ kopje ongezouten geroosterde pinda's",
-            "Gekookte witte rijst, om te serveren"
+            "<strong>For the Marinade</strong>",
+            "    1½ tablespoons soy sauce",
+            "    1 tablespoon dry sherry",
+            "    2 teaspoons corn starch",
+            "    680 g chicken tenderloins, cut into 1-in pieces",
+            "For the Sauce",
+            "    1 tablespoon balsamic vinegar",
+            "    2 tablespoons soy sauce",
+            "    1 tablespoon hoisin sauce, best quality such as Kikkoman or Lee Kum Kee",
+            "    1 tablespoon Asian/toasted sesame oil",
+            "    1½ tablespoons sugar",
+            "    1 tablespoon corn starch",
+            "    ½ teaspoon crushed red pepper flakes (use half the amount for a milder sauce)",
+            "    ¼ teaspoon ground ginger",
+            "    80 ml water",
+            "For the Stir-fry",
+            "    2½ tablespoons vegetable oil",
+            "    1 large red bell pepper, diced",
+            "    2 stalks celery, halved lengthwise and thinly sliced",
+            "    ¼ teaspoon salt",
+            "    3 cloves garlic, chopped",
+            "    5 scallions, white and green parts, thinly sliced",
+            "    50 g whole roasted unsalted peanuts or cashews"
         ],
-        "instructions": ["1 Marineer de kip: Klop in een middelgrote kom de sojasaus, droge sherry en maïzena door elkaar tot de maïzena is opgelost. Voeg de kip toe en schep om. Laat 15 minuten op kamertemperatuur staan, af en toe roeren.",
-                        "2 Bereid de saus: Klop in een andere middelgrote kom alle sausingrediënten samen tot de maïzena is opgelost (het kan aan de bodem van de kom blijven plakken, dus zorg ervoor dat je het opschraapt).",
-                        "3 Verhit een grote koekenpan met antiaanbaklaag op hoog vuur tot deze heel heet is. Voeg 1 eetlepel olie toe en wervel om het te bedekken. Voeg de paprika, selderij en zout toe en bak, onder regelmatig roeren, tot ze lichtjes zacht worden en bruin beginnen te worden, ongeveer 5 minuten. Doe de groenten over in een grote kom en zet apart.",
-                        "4 Voeg een extra ½ eetlepel olie toe aan de pan en zet op hoog vuur. Voeg de helft van de kip toe (het is belangrijk dat de pan niet te vol is) en bak deze aan één kant bruin, ongeveer 1½ minuut. Draai de stukken kip om en bak nog ongeveer 1½ minuut, of tot de kip net gaar is. Doe de kip over in de kom met de paprika en selderij. Voeg nog een ½ eetlepel olie toe aan de pan. Voeg de overgebleven kip toe en bak deze aan één kant goudbruin, ongeveer 1½ minuut. Draai de stukken kip om en bak nog 1 minuut. Voeg nog een ½ eetlepel olie toe aan de pan, samen met de knoflook en de bosuitjes, en bak al roerend met de kip nog ongeveer 30 seconden.",
-                        "5 Voeg de gereserveerde groenten en de gereserveerde kip toe aan de pan, samen met de saus. Zet het vuur laag en kook tot de kip en groenten door en door warm zijn en de saus is ingedikt, ongeveer 30 seconden. Roer de noten erdoor. Proef en pas de smaak aan, indien nodig, en serveer. (Let op: de saus wordt dikker als hij staat; verdun hem indien nodig met een paar eetlepels water)."
+        "instructions": ["Marineer de kip: Klop in een middelgrote kom de sojasaus, droge sherry en maïzena door elkaar tot de maïzena is opgelost. Voeg de kip toe en schep om. Laat 15 minuten op kamertemperatuur staan, af en toe roeren.",
+                        "Bereid de saus: Klop in een andere middelgrote kom alle sausingrediënten samen tot de maïzena is opgelost (het kan aan de bodem van de kom blijven plakken, dus zorg ervoor dat je het opschraapt).",
+                        "Verhit een grote koekenpan met antiaanbaklaag op hoog vuur tot deze heel heet is. Voeg 1 eetlepel olie toe en wervel om het te bedekken. Voeg de paprika, selderij en zout toe en bak, onder regelmatig roeren, tot ze lichtjes zacht worden en bruin beginnen te worden, ongeveer 5 minuten. Doe de groenten over in een grote kom en zet apart.",
+                        "Voeg een extra ½ eetlepel olie toe aan de pan en zet op hoog vuur. Voeg de helft van de kip toe (het is belangrijk dat de pan niet te vol is) en bak deze aan één kant bruin, ongeveer 1½ minuut. Draai de stukken kip om en bak nog ongeveer 1½ minuut, of tot de kip net gaar is. Doe de kip over in de kom met de paprika en selderij. Voeg nog een ½ eetlepel olie toe aan de pan. Voeg de overgebleven kip toe en bak deze aan één kant goudbruin, ongeveer 1½ minuut. Draai de stukken kip om en bak nog 1 minuut. Voeg nog een ½ eetlepel olie toe aan de pan, samen met de knoflook en de bosuitjes, en bak al roerend met de kip nog ongeveer 30 seconden.",
+                        "Voeg de gereserveerde groenten en de gereserveerde kip toe aan de pan, samen met de saus. Zet het vuur laag en kook tot de kip en groenten door en door warm zijn en de saus is ingedikt, ongeveer 30 seconden. Roer de noten erdoor. Proef en pas de smaak aan, indien nodig, en serveer. (Let op: de saus wordt dikker als hij staat; verdun hem indien nodig met een paar eetlepels water)."
     ]
     }
 }
