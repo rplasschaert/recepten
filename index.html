@@ -1,59 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Collection</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mijn Receptenboek</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Recipe Collection</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#recipes">Recipes</a></li>
-            </ul>
-        </nav>
+        <h1>Mijn Receptenboek</h1>
+        <input type="text" id="zoekBalk" placeholder="Zoek naar ingrediënten...">
     </header>
 
-    <main>
-        <section id="home">
-            <h2>Welcome to the Recipe Collection</h2>
-            <p>Discover a wide variety of delicious recipes!</p>
-			<button id="wake-lock-button">Prevent Screen from Sleeping</button>
-			<p id="wake-lock-status"></p>
-        </section>
+    <main id="receptenLijst"></main>
 
-        <section id="recipes">
-            <h2>Recipes</h2>
-            <div class="recipe-list">
-				<div class="recipe-card">
-                    <h3>Kung Pao Chicken</h3>
-                    <p>Kung Pao chicken, a classic Chinese takeout dish of stir-fried chicken, peanuts, and vegetables, is easy to make at home. </p>
-					<button class="view-recipe" data-recipe="kung-pao-chicken">View Recipe</button>
-				</div>
-            </div>
-        </section>
-
-        <!-- Detailed Recipe View (initially hidden) -->
-		<div id="recipe-details" class="hidden">
-            <h1 id="recipe-title"></h1>
-            <img id="recipe-image" class="hidden" alt="Recept afbeelding">
-            
-            <h2>Ingrediënten</h2>
-            <ul id="ingredient-list"></ul>
-    
-            <h2>Instructies</h2>
-            <p id="instruction-list"></p>
-    
-            <button id="back-button">Terug naar Recepten</button>
-        </div>
-
-    </main>
-
-
-    <!-- Link to the external JavaScript file -->
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

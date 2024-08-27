@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Spaghetti Bolognese",
+        "ingredients": [
+            "400g spaghetti",
+            "300g rundergehakt",
+            "1 ui",
+            "2 teentjes knoflook",
+            "400g tomatenblokjes",
+            "2 el olijfolie",
+            "Peper en zout naar smaak"
+        ],
+        "instructions": [
+            "Kook de spaghetti volgens de instructies op de verpakking.",
+            "Verhit de olijfolie in een pan en bak het gehakt rul.",
+            "Voeg de fijngesneden ui en knoflook toe en bak deze mee.",
+            "Voeg de tomatenblokjes toe en laat het geheel 15 minuten sudderen.",
+            "Breng op smaak met peper en zout.",
+            "Serveer de saus over de spaghetti."
+        ]
+    },
+    {
+        "name": "Pannenkoeken",
+        "ingredients": [
+            "250g bloem",
+            "2 eieren",
+            "500ml melk",
+            "2 el suiker",
+            "1 snufje zout",
+            "Boter voor het bakken"
+        ],
+        "instructions": [
+            "Meng bloem, eieren, melk, suiker en zout tot een glad beslag.",
+            "Verhit een beetje boter in een koekenpan.",
+            "Giet een beetje beslag in de pan en bak de pannenkoek aan beide zijden goudbruin.",
+            "Herhaal met de rest van het beslag."
+        ]
+    }
+]
