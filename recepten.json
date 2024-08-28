@@ -1,26 +1,83 @@
 [
     {
-        "name": "Spaghetti Bolognese",
+        "name": "Kung Pao Chicken",
+        "externalLink": "https://www.recipetineats.com/kung-pao-chicken/#wprm-recipe-container-25341",
         "ingredients": [
-            "400g spaghetti",
-            "300g rundergehakt",
-            "1 ui",
-            "2 teentjes knoflook",
-            "400g tomatenblokjes",
-            "2 el olijfolie",
-            "Peper en zout naar smaak"
+            "shaoxing",
+            "kip",
+            "knoflook",
+            "rijst"
         ]
     },
     {
-        "name": "Pannenkoeken",
-        "externalLink": "https://www.google.nl",
+        "name": "Vegetarische lasagne met courgette en spinazie",
+        "externalLink": "https://www.hellofresh.nl/recipes/vegetarische-lasagne-met-courgette-en-spinazie-621783fd97c086443e06ee34",
         "ingredients": [
-            "250g bloem",
-            "2 eieren",
-            "500ml melk",
-            "2 el suiker",
-            "1 snufje zout",
-            "Boter voor het bakken"
+            "Courgette",
+            "Ui",
+            "Knoflook",
+            "oregano",
+            "Spinazie",
+            "Kookroom",
+            "kaas",
+            "lasagnebladen",
+            "groentebouillon"
+        ]
+    },
+    {
+        "name": "Indonesische rendang",
+        "externalLink": "https://www.leukerecepten.nl/recepten/basisrecept-indonesische-rendang/",
+        "ingredients": [
+            "boemboe voor rendang",
+            "sucadelappen",
+            "kokosmelk",
+            "laurierblad",
+            "sereh (citroengras)",
+            "runderbouilon",
+            "sambal",
+            "rijst"
+        ]
+    },
+    {
+        "name": "Mushroom Masala",
+        "externalLink": "https://www.culy.nl/recepten/vega-curry-paddenstoelen-masala/",
+        "ingredients": [
+            "komijnzaadjes",
+            "gember",
+            "tomaat",
+            "kokosmelk ",
+            "mangochutney ",
+            "oesterzwammen",
+            "rijst",
+            "lasagnebladen",
+            "groentebouillon"
+        ]
+    },
+    {
+        "name": "Shakshuka",
+        "externalLink": "https://miljuschka.nl/midden-oosten-favoriet-shakshuka/",
+        "ingredients": [
+            "komijnzaadjes",
+            "paprika",
+            "tomaat",
+            "tomatenpuree ",
+            "eieren",
+            "platbrood"
+        ]
+    },
+    {
+        "name": "Paddenstoelen risotto ",
+        "externalLink": "https://www.leukerecepten.nl/recepten/paddenstoelen-risotto/",
+        "ingredients": [
+            "risotto rijst",
+            "kaas",
+            "droge witte wijn",
+            "groentebouillon",
+            "paddenstoelen kastanjechampignons ",
+            "tijm",
+            "truffelolie ",
+            "rucola",
+            "truffel"
         ]
     }
 ]
