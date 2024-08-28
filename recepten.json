@@ -78,6 +78,119 @@
             "truffelolie ",
             "rucola",
             "truffel"
-        ]
+        ] 
+    },
+    {
+        "name": "Smashed cucumber salad",
+        "externalLink": "https://thewoksoflife.com/smashed-asian-cucumber-salad/#recipe",
+        "ingredients": [
+            "komkommer"
+        ] 
+    },
+    {
+        "name": "Pad Thai met kip",
+        "externalLink": "https://www.eefkooktzo.nl/pad-thai-met-kip/#wprm-recipe-container-18205",
+        "ingredients": [
+            "rijstnoodles",
+            "kip",
+            "bosui",
+            "limoen",
+            "shiitake",
+            "vissaus",
+            "tauge ",
+            "eieren",
+            "sojasaus"
+        ] 
+    },
+    {
+        "name": "Ravioli met spinazie",
+        "externalLink": "https://www.hellofresh.nl/recipes/ravioli-in-romige-spinaziesaus-5d70f37d9ef28c00160b34e3",
+        "ingredients": [
+            "Cherrytomaten",
+            "Spekblokjes",
+            "Spinazie",
+            "limoen",
+            "ravioli ",
+            "room"
+        ] 
+    },
+    {
+        "name": "Pasta alla norma",
+        "externalLink": "https://www.leukerecepten.nl/recepten/pasta-alla-norma-2/",
+        "ingredients": [
+            "aubergines",
+            "pasta",
+            "blikken hele tomaten",
+            "basilicum",
+            "kaas"
+        ] 
+    },
+    {
+        "name": "Spaghetti met gehaktballetjes",
+        "externalLink": "https://miljuschka.nl/spaghetti-met-gehaktballetjes/#wprm-recipe-container-53449",
+        "ingredients": [
+            "tomatenblokjes",
+            "pasta",
+            "gehakt",
+            "basilicum",
+            "kaas"
+        ] 
+    },
+    {
+        "name": "Pasta Amatriciana",
+        "externalLink": "https://pinabresciani.com/pasta-amatriciana/#wprm-recipe-container-5915",
+        "ingredients": [
+            "Guanciale",
+            "pasta",
+            "tomaten",
+            "rode peper",
+            "kaas"
+        ] 
+    },
+    {
+        "name": "Spaghetti Alla Puttanesca",
+        "externalLink": "https://pinabresciani.com/spaghetti-alla-puttanesca/#wprm-recipe-container-6107",
+        "ingredients": [
+            "anchovis",
+            "pasta",
+            "tomaten",
+            "kappertjes",
+            "kaas"
+        ] 
+    },
+    {
+        "name": "Spaghetti Alla Nerano",
+        "externalLink": "https://pinabresciani.com/spaghetti-alla-nerano/#wprm-recipe-container-8112",
+        "ingredients": [
+            "Courgette",
+            "pasta",
+            "tomaten",
+            "kappertjes",
+            "kaas"
+        ] 
+    },
+    {
+        "name": "Spaghetti champignons roomsaus",
+        "externalLink": "https://www.eefkooktzo.nl/spaghetti-champignons-roomsaus/#wprm-recipe-container-19604",
+        "ingredients": [
+            "champignons",
+            "pasta",
+            "kookroom",
+            "kaas"
+        ] 
+    },
+    {
+        "name": "Butter chicken",
+        "externalLink": "https://miljuschka.nl/indiase-butter-chicken/#wprm-recipe-container-63503",
+        "ingredients": [
+            "gember",
+            "yoghurt",
+            "kip",
+            "tomatenpuree",
+            "tomatenblokjes",
+            "rijst",
+            "naan"
+        ] 
     }
+
 ]
