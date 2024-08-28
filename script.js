@@ -9,10 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 data.forEach(recipe => {
                     const recipeLink = document.createElement('a');
-                    recipeLink.href = `recepten/${encodeURIComponent(recipe.name.toLowerCase().replace(/ /g, '-') + '.html')}`;
                     recipeLink.classList.add('recept-link');
                     recipeLink.textContent = sanitizeString(recipe.name);
                     recipeLink.dataset.ingredients = sanitizeString(recipe.ingredients.join(', ').toLowerCase());
+
+                    // Check if the recipe has an external link
+                    if (recipe.externalLink) {
+                        recipeLink.href = recipe.externalLink;
+                        recipeLink.target = '_blank'; // Open external links in a new tab
+                    } else {
+                        recipeLink.href = `recepten/${encodeURIComponent(recipe.name.toLowerCase().replace(/ /g, '-') + '.html')}`;
+                    }
+
                     receptenLijst.appendChild(recipeLink);
                 });
             })
