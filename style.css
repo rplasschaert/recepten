@@ -61,12 +61,7 @@ ul li, ol li {
     position: relative;
 }
 
-ul li::before {
-    content: '•'; /* Custom bullet point */
-    position: absolute;
-    left: 0;
-    color: #000000; /* Bullet color matches header */
-}
+
 
 ol li {
     counter-increment: step-counter;

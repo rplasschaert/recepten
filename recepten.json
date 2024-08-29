@@ -203,6 +203,20 @@
             "Sambal",
             "mosterd"
         ] 
+    },
+    {
+        "name": "Bibimbap met tacorijst",
+        "ingredients": [
+            "tomaat",
+            "limoen",
+            "eieren",
+            "kimchi",
+            "gehakt",
+            "rijst",
+            "lente-uitjes",
+            "worcestersaus",
+            "sojasaus"
+        ] 
     }
 
 ]
