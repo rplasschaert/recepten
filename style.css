@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -42,4 +42,101 @@ header {
 
 .recept-link:hover {
     background-color: #f0f0f0;
+}
+h2 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+ul, ol {
+    text-align: left; /* Align lists to the left for better readability */
+    margin: 20px 0;
+    padding: 0 20px;
+    list-style-type: none; /* Remove default bullets */
+}
+
+ul li, ol li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    padding-left: 20px; /* Add padding for custom bullet style */
+    position: relative;
+}
+
+ul li::before {
+    content: '•'; /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    color: #000000; /* Bullet color matches header */
+}
+
+ol li {
+    counter-increment: step-counter;
+    padding-left: 40px;
+}
+
+ol li::before {
+    content: counter(step-counter) ".";
+    position: absolute;
+    left: 0;
+    color: #000000; /* Numbering color matches header */
+}
+/* General styling for the recipe page */
+body {
+    font-family: 'Merriweather', serif; /* Change font to a more suitable one */
+    text-align: center; /* Center-align all text */
+    background-color: #f8f8f8; /* Light background for better readability */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improve line spacing */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center the main content */
+    padding: 20px; /* Add padding around the content */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for a clean, elevated look */
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+
+button, img {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d62828; /* Darken the button color on hover */
+}
+
+img#homeButton {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
