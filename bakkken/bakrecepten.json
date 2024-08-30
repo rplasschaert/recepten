@@ -8,19 +8,29 @@
         ]
     },
     {
-        "name": "Vegetarische lasagne met courgette en spinazie",
-        "externalLink": "https://www.hellofresh.nl/recipes/vegetarische-lasagne-met-courgette-en-spinazie-621783fd97c086443e06ee34",
+        "name": "salted butter chocolate chunk cookies",
+        "externalLink": "https://www.olgamassov.com/2018/01/alison-romans-salted-butter-chocolate-chunk-cookies/",
         "ingredients": [
-            "Courgette",
-            "Ui",
-            "Knoflook",
-            "oregano",
-            "Spinazie",
-            "Kookroom",
-            "kaas",
-            "lasagnebladen",
-            "groentebouillon"
+            "chocolade",
+            "koekjes"
+        ]
+    },
+    {
+        "name": "Brownie",
+        "externalLink": "https://www.biggerbolderbaking.com/best-ever-brownies/#wprm-recipe-container-18610",
+        "ingredients": [
+            "chocolade",
+            "brownie"
+        ]
+    },
+    {
+        "name": "Peanut butter cookies",
+        "externalLink": "https://www.biggerbolderbaking.com/peanut-butter-cookies-best-ever/#wprm-recipe-container-27539",
+        "ingredients": [
+            "pindakaas",
+            "koekjes"
         ]
     }
+    
 
 ]
