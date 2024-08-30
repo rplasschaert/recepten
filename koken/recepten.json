@@ -217,6 +217,21 @@
             "worcestersaus",
             "sojasaus"
         ] 
+    },
+    {
+        "name": "Japanse curry",
+        "ingredients": [
+            "tomaat",
+            "limoen",
+            "eieren",
+            "kimchi",
+            "gehakt",
+            "rijst",
+            "lente-uitjes",
+            "worcestersaus",
+            "sojasaus"
+        ] 
     }
+
 
 ]
