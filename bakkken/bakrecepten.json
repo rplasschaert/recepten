@@ -30,6 +30,13 @@
             "pindakaas",
             "koekjes"
         ]
+    },
+    {
+        "name": "Bananenbrood",
+        "ingredients": [
+            "banaan",
+            "chocolade"
+        ]
     }
     
 
