@@ -232,7 +232,43 @@
             "worcestersaus",
             "sojasaus"
         ] 
+    },{
+        "name": "Enchilada",
+        "externalLink": "https://www.eefkooktzo.nl/enchiladas-met-gehakt/",
+        "ingredients": [
+            "wraps",
+            "gehakt",
+            "ui",
+            "paprika",
+            "mais",
+            "kaas"
+        ] 
+    },{
+        "name": "Zalm teriyaki",
+        "externalLink": "https://www.justonecookbook.com/teriyaki-salmon-recipe/#wprm-recipe-container-56747",
+        "ingredients": [
+            "zalm"
+        ]
+    },{
+        "name": "Japanse gebakken rijst",
+        "externalLink": "https://www.justonecookbook.com/japanese-fried-rice-edamame-tofu-hijiki-seaweed/#wprm-recipe-container-67883",
+        "ingredients": [
+            "rijst",
+            "edamame",
+            "sojasaus"
+        ]
+    },{
+        "name": "Yakisoba",
+        "externalLink": "https://www.justonecookbook.com/yakisoba/#wprm-recipe-container-56948",
+        "ingredients": [
+            "mie",
+            "noodles",
+            "wortel",
+            "Ui",
+            "shiitake"
+        ]
     }
+
 
 
 ]
