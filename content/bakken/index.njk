@@ -4,7 +4,7 @@ layout: "base.njk"
 permalink: /bakken/ # Genereert /bakken/index.html (schonere URL)
 eleventyComputed:
   allRecipes: |
-    const mdRecipes = collections.all | getFilteredByGlob("content/bakken/*.md") | FilterOutCurrentPage(page); {# Pad met 2 'k's #}
+    const mdRecipes = collections.all | getFilteredByGlob("content/bakken/*.md") | FilterOutCurrentPage(page); 
     const jsonRecipes = bakRecepten ? bakRecepten : [];
     const mappedMdRecipes = mdRecipes.map(item => ({ title: item.data.title, url: item.url, ingredients: item.data.ingredients || [], isExternal: false }));
     const mappedJsonRecipes = jsonRecipes.filter(item => item.externalLink).map(item => ({ title: item.name, url: item.externalLink, ingredients: item.ingredients || [], isExternal: true }));
