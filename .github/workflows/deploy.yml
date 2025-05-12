@@ -1,0 +1,47 @@
+# .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Of 'master', afhankelijk van je standaard branch naam
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Of een recentere LTS versie
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci # Gebruik 'ci' voor snellere, betrouwbare installs in CI
+
+      - name: Build the site using Eleventy
+        run: npm run build # Voert 'npx @11ty/eleventy' uit
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site # Map waar Eleventy de site bouwt
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,27 @@
+---
+title: "Receptenverzameling" # Titel voor de <title> tag en eventueel elders
+layout: "base.njk"         # Gebruik de basis layout
+permalink: /index.html       # Zorgt ervoor dat dit de root index.html wordt (jouwwebsite.com/)
+eleventyNavigation:          # Optioneel: als je de Eleventy Navigation plugin gebruikt
+  key: Home                # Naam voor in het menu
+  order: 1                 # Eerste item in het menu
+---
+
+{# Deze header is specifiek voor de homepage. #}
+{# Je kunt deze ook verwijderen als de header in base.njk voldoende is. #}
+<header style="text-align: center; margin-bottom: 2rem;">
+    <h1>{{ title }}</h1> {# Gebruikt de titel uit de front matter #}
+</header>
+
+{# Dit is de hoofdinhoud specifiek voor de index pagina #}
+<main id="receptenLijst" style="display: flex; flex-direction: column; align-items: center;">
+    {# Links naar de lijstpagina's voor koken en bakken. #}
+    {# De href paden (/koken/ en /bakken/) moeten overeenkomen met de #}
+    {# permalink instellingen in content/koken/index.njk en content/bakken/index.njk #}
+    <a class="recept-link" href="{{ '/koken/' | url }}">Koken</a>
+    <a class="recept-link" href="{{ '/bakken/' | url }}">Bakken</a>
+</main>
+
+{# De rest van de HTML (zoals <html>, <head>, <body>, footer, script links) #}
+{# wordt afgehandeld door de _includes/base.njk layout. #}
+{# De CSS class "recept-link" wordt gedefinieerd in je style.css #}

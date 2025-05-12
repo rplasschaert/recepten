@@ -1,0 +1,27 @@
+{
+    "name": "recepten",
+    "version": "1.0.0",
+    "description": "Mijn receptenwebsite",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve",
+        "build": "npx @11ty/eleventy"
+    },
+    "keywords": [
+        "recepten",
+        "eleventy"
+    ],
+    "author": "Jouw Naam",
+    "license": "ISC",
+    "devDependencies": {
+        "@11ty/eleventy": "^2.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rplasschaert/recepten.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rplasschaert/recepten/issues"
+    },
+    "homepage": "https://github.com/rplasschaert/recepten#readme"
+}

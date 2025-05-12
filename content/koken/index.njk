@@ -1,0 +1,41 @@
+---
+title: "Kook Recepten"
+layout: "base.njk"               # Gebruik de basis layout
+permalink: /koken/index.html     # Output URL (kan ook /koken/ zijn als je pretty URLs wilt)
+eleventyComputed:
+  # Maak een lokale collectie van alle .md bestanden in deze map
+  # Exclusief dit index.njk bestand zelf
+  recipeCollection: |
+    collections.all | getFilteredByGlob("content/koken/*.md") | logCollectionSize
+---
+
+{# Specifieke header voor de kookrecepten lijst #}
+<header>
+    {# Je kunt de algemene header uit base.njk gebruiken, of deze specifieke #}
+    <a href="/"><img src="/assets/images/home-icon.png" alt="Homepage" style="cursor: pointer; width: 50px; height: 50px;"></a>
+    <h1>{{ title }}</h1>
+    {# De zoekbalk zoals in je originele lijst #}
+    <input type="text" id="zoekBalk" placeholder="Zoek recept of ingrediënt..." style="width: 80%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ddd;">
+</header>
+
+{# De lijst met recepten wordt nu direct hier gegenereerd #}
+<main id="receptenLijst">
+    {# Controleer of er recepten zijn in de collectie #}
+    {% if recipeCollection and recipeCollection.length %}
+        {# Loop door elk recept in de collectie #}
+        {% for recept in recipeCollection | sort(false, false, 'data.title') %} {# Sorteer op titel #}
+            {# Zorg dat ingredients een array is en maak er een string van voor data attribuut #}
+            {% set ingredients_str = recept.data.ingredients | default([]) | join(', ') | lower %}
+            {# Genereer de link met de class en data-attribuut zoals je script verwacht #}
+            <a class="recept-link" href="{{ recept.url | url }}" data-ingredients="{{ ingredients_str }}">
+                {{ recept.data.title }}
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>Geen kookrecepten gevonden.</p>
+    {% endif %}
+</main>
+
+{# Het benodigde JavaScript (voor zoeken/wake-lock) wordt geladen via de base.njk layout #}
+{# Je moet mogelijk assets/js/script.js aanpassen zodat het de reeds gerenderde lijst gebruikt #}
+{# en niet probeert JSON te fetchen. #}
