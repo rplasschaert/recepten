@@ -1,0 +1,54 @@
+---
+layout: base.njk
+---
+{# Rest van de template code begint HIER, na de sluitende --- #}
+
+{# Specifieke header voor de receptpagina #}
+<header class="recept-header" style="margin-bottom: 2rem;">
+    {# Logica om de juiste 'terug'-link te bepalen op basis van de categorie #}
+    {% set backUrl = "/" %} {# Standaard terug naar de homepage #}
+    {% if category == 'koken' %}
+        {# Link naar de koken lijstpagina (pas permalink aan indien nodig) #}
+        {% set backUrl = "/koken/" %}
+    {% elif category == 'bakken' %}
+        {# Link naar de bakken lijstpagina (pas permalink aan indien nodig) #}
+        {% set backUrl = "/bakken/" %}
+    {% endif %}
+
+    {# Knop/link terug naar de relevante lijstpagina #}
+    <a href="{{ backUrl | url }}" style="display: inline-block; margin-bottom: 1rem;">
+        <img src="{{ '/assets/images/home-icon.png' | url }}" alt="Terug naar {{ category | capitalize }} lijst" style="cursor: pointer; width: 40px; height: 40px; vertical-align: middle;">
+        <span style="vertical-align: middle; margin-left: 0.5rem;">Terug naar {{ category | capitalize }}</span>
+    </a>
+
+    {# De titel van het recept uit de front matter van het .md bestand #}
+    <h1>{{ title }}</h1>
+</header>
+
+{# Gebruik <article> voor de semantiek van een op zichzelf staand stuk content #}
+<article class="recept-details">
+
+    {# Sectie voor ingrediënten #}
+    <h2>Ingrediënten</h2>
+    {# Controleer of de 'ingredients' variabele bestaat en items bevat #}
+    {% if ingredients and ingredients.length %}
+        <ul class="ingrediënten-lijst">
+            {# Loop door de ingrediënten uit de front matter #}
+            {% for item in ingredients %}
+                <li><input type="checkbox"> {{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {# Toon een bericht als er geen ingrediënten zijn opgegeven #}
+        <p>Ingrediënten niet gespecificeerd.</p>
+    {% endif %}
+
+    {# De knop om het scherm wakker te houden #}
+    <button id="voorkomSlapenBtn" style="margin-top: 1rem; margin-bottom: 1rem;">Voorkom dat scherm in slaapstand gaat</button>
+
+    {# Hier wordt de content van het Markdown bestand ingevoegd #}
+    {{ content | safe }}
+
+</article>
+
+{# De footer en de <script> links worden automatisch ingevoegd vanuit base.njk #}

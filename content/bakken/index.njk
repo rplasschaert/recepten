@@ -1,0 +1,37 @@
+---
+title: "Bak Recepten"
+layout: "base.njk"
+permalink: /bakken/ # Genereert /bakken/index.html (schonere URL)
+eleventyComputed:
+  allRecipes: |
+    const mdRecipes = collections.all | getFilteredByGlob("content/bakken/*.md") | FilterOutCurrentPage(page); {# Pad met 2 'k's #}
+    const jsonRecipes = bakRecepten ? bakRecepten : [];
+    const mappedMdRecipes = mdRecipes.map(item => ({ title: item.data.title, url: item.url, ingredients: item.data.ingredients || [], isExternal: false }));
+    const mappedJsonRecipes = jsonRecipes.filter(item => item.externalLink).map(item => ({ title: item.name, url: item.externalLink, ingredients: item.ingredients || [], isExternal: true }));
+    const combined = mappedMdRecipes.concat(mappedJsonRecipes);
+    combined.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
+    return combined;
+---
+
+<header>
+    <a href="/"><img src="/assets/images/home-icon.png" alt="Homepage" style="cursor: pointer; width: 50px; height: 50px;"></a>
+    <h1>{{ title }}</h1>
+    <input type="text" id="zoekBalk" placeholder="Zoek recept of ingrediënt..." style="width: 80%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ddd;">
+</header>
+
+<main id="receptenLijst">
+    {% if allRecipes and allRecipes.length %}
+        {% for recept in allRecipes %}
+            {% set ingredients_str = recept.ingredients | default([]) | join(', ') | lower %}
+            <a class="recept-link"
+               href="{{ recept.url | url }}"
+               data-ingredients="{{ ingredients_str }}"
+               {% if recept.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                {{ recept.title }}
+                {% if recept.isExternal %}<span style="font-size: 0.8em; opacity: 0.7;"> (extern)</span>{% endif %}
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>Geen bakrecepten gevonden.</p>
+    {% endif %}
+</main>
