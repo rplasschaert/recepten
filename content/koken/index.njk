@@ -6,23 +6,22 @@ permalink: /koken/index.html
 
 <header>
     <h1>Kookrecepten</h1>
-    {# Je kunt hier de zoekbalk uit script.js hergebruiken als je die per categorie wilt,
-       maar dan moet script.js aangepast worden om met de statisch geladen content te werken
-       of om enkel de JSON bestanden per categorie te filteren.
-       Voor nu laten we de zoekbalk weg voor eenvoud op deze statische lijst pagina. #}
+    {# Eventueel hier je zoekBalk HTML #}
+    {# <input type="search" id="zoekBalk" placeholder="Zoek op naam of ingrediënt..."> #}
 </header>
 
-<div id="receptenLijst" class="recepten-grid">
+<div id="receptenLijstContainer"> {# Optionele container, de ID receptenLijst wordt niet meer direct gebruikt door het script om te vullen #}
 
     <h2>Recepten (uit Markdown)</h2>
     {% if collections.koken and collections.koken.length > 0 %}
-        <ul>
+        <ul class="recepten-grid"> {# Gebruik een class voor styling van de lijst #}
         {% for recept in collections.koken %}
-            <li class="recept-link">
+            {# Het li element krijgt de class 'recept-link' en het data-ingredients attribuut #}
+            <li class="recept-link" data-ingredients="{{ recept.data.ingredients | join(', ') | lower }}">
                 <a href="{{ recept.url | url }}">
                     <h3>{{ recept.data.title }}</h3>
                 </a>
-                {% if recept.data.ingredients %}
+                {% if recept.data.ingredients and recept.data.ingredients.length > 0 %}
                     <p><strong>Ingrediënten:</strong> {{ recept.data.ingredients | join(", ") }}</p>
                 {% endif %}
             </li>
@@ -34,29 +33,28 @@ permalink: /koken/index.html
 
     <h2>Externe en Snelle Recepten (uit JSON)</h2>
     {% if data.kokenRecepten and data.kokenRecepten.length > 0 %}
-        <ul>
-        {% for recept in data.kokenRecepten %}
-            <li class="recept-link">
-                {% if recept.externalLink %}
-                    <a href="{{ recept.externalLink }}" target="_blank" rel="noopener noreferrer">
-                        <h3>{{ recept.name }} (Extern)</h3>
+        <ul class="recepten-grid"> {# Gebruik een class voor styling van de lijst #}
+        {% for recept_json in data.kokenRecepten %}
+            {# Het li element krijgt de class 'recept-link' en het data-ingredients attribuut #}
+            <li class="recept-link" data-ingredients="{{ recept_json.ingredients | join(', ') | lower }}">
+                {% if recept_json.externalLink %}
+                    <a href="{{ recept_json.externalLink }}" target="_blank" rel="noopener noreferrer">
+                        <h3>{{ recept_json.name }} (Extern)</h3>
                     </a>
-                {% elif recept.category == "koken" %}
-                    {# Zoek het corresponderende markdown recept op basis van naam #}
-                    {% set mdRecipe = collections.koken | FilterOutCurrentPage | find("data.title", recept.name) %}
+                {% elif recept_json.category == "koken" %}
+                    {% set mdRecipe = collections.koken | find("data.title", recept_json.name) %}
                     {% if mdRecipe %}
                         <a href="{{ mdRecipe.url | url }}">
-                            <h3>{{ recept.name }}</h3>
+                            <h3>{{ recept_json.name }}</h3>
                         </a>
                     {% else %}
-                        <h3>{{ recept.name }} (Link niet gevonden, controleer naam overeenkomst met .md bestand)</h3>
+                        <h3>{{ recept_json.name }} <small>(Lokale link niet gevonden)</small></h3>
                     {% endif %}
                 {% else %}
-                     {# Recepten in kokenRecepten.json die niet extern zijn en geen duidelijke md match hebben (of geen category:koken) #}
-                     <h3>{{ recept.name }}</h3>
+                     <h3>{{ recept_json.name }}</h3>
                 {% endif %}
-                {% if recept.ingredients %}
-                    <p><strong>Ingrediënten:</strong> {{ recept.ingredients | join(", ") }}</p>
+                {% if recept_json.ingredients and recept_json.ingredients.length > 0 %}
+                    <p><strong>Ingrediënten:</strong> {{ recept_json.ingredients | join(", ") }}</p>
                 {% endif %}
             </li>
         {% endfor %}
@@ -65,3 +63,6 @@ permalink: /koken/index.html
         <p>Geen extra kookrecepten gevonden in JSON.</p>
     {% endif %}
 </div>
+
+{# Zorg dat je script.js geladen wordt, meestal in base.njk of hieronder #}
+{# <script src="{{ '/assets/js/script.js' | url }}"></script> #}

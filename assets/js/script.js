@@ -1,55 +1,44 @@
+// assets/js/script.js
 document.addEventListener('DOMContentLoaded', function () {
     const zoekBalk = document.getElementById('zoekBalk');
-    const receptenLijst = document.getElementById('receptenLijst');
+    // De receptenLijst div wordt nu gevuld door Eleventy.
+    // We hebben het element hier niet direct nodig, tenzij je er specifiek iets mee wilt doen
+    // buiten de zoekfunctionaliteit die de .recept-link elementen direct target.
+    // const receptenLijst = document.getElementById('receptenLijst');
 
-    // Function to fetch and display recipes
-    function loadRecipes() {
-        fetch('recepten.json')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(recipe => {
-                    const recipeLink = document.createElement('a');
-                    recipeLink.classList.add('recept-link');
-                    recipeLink.textContent = sanitizeString(recipe.name);
-                    recipeLink.dataset.ingredients = sanitizeString(recipe.ingredients.join(', ').toLowerCase());
+    // De functie loadRecipes() is niet meer nodig, omdat Eleventy de receptenlijsten genereert.
 
-                    // Check if the recipe has an external link
-                    if (recipe.externalLink) {
-                        recipeLink.href = recipe.externalLink;
-                        recipeLink.target = '_blank'; // Open external links in a new tab
-                    } else {
-                        recipeLink.href = `recepten/${encodeURIComponent(recipe.name.toLowerCase().replace(/ /g, '-') + '.html')}`;
-                    }
-
-                    receptenLijst.appendChild(recipeLink);
-                });
-            })
-            .catch(error => console.error('Fout bij het laden van recepten:', error));
-    }
-
-    loadRecipes();
-
-    // Function to sanitize strings to prevent XSS
+    // Functie om strings te saneren (goed voor veiligheid tegen XSS)
     function sanitizeString(str) {
+        if (typeof str !== 'string') {
+            return ''; // Geef een lege string terug als de input geen string is
+        }
         const textarea = document.createElement('textarea');
         textarea.textContent = str;
         return textarea.innerHTML;
     }
 
-    // Zoekfunctionaliteit voor ingrediënten
+    // Zoekfunctionaliteit
     if (zoekBalk) {
         zoekBalk.addEventListener('input', function () {
-            const zoekTerm = sanitizeString(this.value.toLowerCase());
-            const links = document.querySelectorAll('.recept-link');
+            const zoekTerm = sanitizeString(this.value.toLowerCase().trim());
             
-            links.forEach(link => {
-                const receptNaam = link.textContent.toLowerCase();
-                const ingrediënten = link.dataset.ingredients;
+            // We selecteren nu de list items die de recept-link class hebben.
+            // Deze elementen moeten de data-ingredients attribuut hebben.
+            const receptItems = document.querySelectorAll('.recept-link'); 
+            
+            receptItems.forEach(item => {
+                // Probeer de receptnaam te vinden. Dit kan de h3 binnen de link zijn.
+                const naamElement = item.querySelector('h3');
+                const receptNaam = naamElement ? naamElement.textContent.toLowerCase() : '';
                 
-                if (receptNaam.includes(zoekTerm) || ingrediënten.includes(zoekTerm)) {
-                    link.style.display = '';
+                const ingredienten = item.dataset.ingredients ? item.dataset.ingredients.toLowerCase() : '';
+                
+                // Toon het item als de zoekterm overeenkomt met de naam OF de ingrediënten
+                if (receptNaam.includes(zoekTerm) || ingredienten.includes(zoekTerm)) {
+                    item.style.display = ''; // Of 'list-item', 'flex', etc. afhankelijk van je CSS
                 } else {
-                    link.style.display = 'none';
+                    item.style.display = 'none';
                 }
             });
         });
@@ -63,13 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 navigator.wakeLock.request('screen')
                     .then(() => {
                         voorkomSlapenBtn.textContent = 'Scherm blijft wakker';
+                        voorkomSlapenBtn.disabled = true; // Optioneel: knop uitschakelen na succes
                     })
                     .catch(err => {
-                        console.error('Kan wake lock niet activeren:', err);
-                        voorkomSlapenBtn.textContent = 'Wake lock API wordt niet ondersteund';
+                        console.error('Wake Lock API kon niet geactiveerd worden:', err);
+                        voorkomSlapenBtn.textContent = 'Wake Lock niet ondersteund';
+                        voorkomSlapenBtn.title = err.message; // Geef meer info in de title
                     });
             } else {
-                voorkomSlapenBtn.textContent = 'Wake lock API wordt niet ondersteund';
+                voorkomSlapenBtn.textContent = 'Wake Lock API niet ondersteund';
+                console.warn('Wake Lock API is niet beschikbaar in deze browser.');
             }
         });
     }

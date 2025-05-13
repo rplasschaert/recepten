@@ -1,6 +1,6 @@
 // .eleventy.js
 module.exports = function(eleventyConfig) {
-
+  
   // Input directory: waar je bronbestanden staan (markdown, templates)
   // Output directory: waar Eleventy de gebouwde site plaatst
   // Includes directory: waar je layouts staan
@@ -9,6 +9,7 @@ module.exports = function(eleventyConfig) {
   const outputDir = "_site";  // Map voor de gegenereerde site
   const includesDir = "_includes";
   const dataDir = "_data";
+  const fs = require('fs');
   // const contentDir = "content"; // Deze contentDir is niet standaard hier
 
   // Kopieer statische assets (CSS, JS, Images) naar de output map
@@ -21,7 +22,6 @@ module.exports = function(eleventyConfig) {
     if (!currentPage || !currentPage.inputPath) { return collection; }
     return collection.filter(item => item.inputPath !== currentPage.inputPath);
   });
-
   return {
       dir: {
         input: ".",
