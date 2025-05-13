@@ -135,3 +135,144 @@ img#homeButton {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+/* assets/css/style.css - Aanvullingen voor base.njk */
+
+/* Algemene site header styling */
+.site-header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px; /* Iets meer padding voor een ruimere look */
+    text-align: center; /* Houd de algemene centrering, maar specifieke elementen kunnen anders uitgelijnd worden */
+}
+
+.site-header .header-content {
+    display: flex; /* Gebruik flexbox voor betere uitlijning */
+    justify-content: space-between; /* Titel links, navigatie rechts (of centreer alles) */
+    align-items: center;
+    max-width: 1200px; /* Maximale breedte voor de content in de header */
+    margin: 0 auto; /* Centreer de header content */
+}
+
+.site-header a#homeLink {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* Titel van de site in de header */
+.site-title {
+    font-size: 1.8em; /* Grotere titel */
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Home button icoon (als je een afbeelding gebruikt) */
+img#homeButtonIcon { /* Als je een icoon gebruikt ipv tekst */
+    width: 40px; /* Aanpassen aan je icoon */
+    height: 40px;
+    margin-right: 10px; /* Ruimte tussen icoon en eventuele tekst */
+}
+
+/* Navigatie styling */
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Nav items naast elkaar */
+}
+
+.site-nav li {
+    margin-left: 20px; /* Ruimte tussen nav items */
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.site-nav a:hover,
+.site-nav a.active { /* Voor actieve pagina link, indien je dat implementeert */
+    background-color: #555;
+}
+
+/* Hoofdinhoud styling */
+main {
+    max-width: 800px; 
+    margin: 30px auto; /* Meer ruimte boven en onder de main content */
+    padding: 20px; 
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Footer styling */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; /* Ruimte boven de footer */
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Zorgt ervoor dat de body minimaal de hoogte van het scherm inneemt,
+   en de footer onderaan blijft, zelfs bij weinig content. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* Zorgt dat de main content de beschikbare ruimte vult */
+}
+
+
+/* Je bestaande .recept-link styling kan hieronder blijven of geïntegreerd worden */
+.recept-link {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    /* width: 80%; /* Dit was voor een enkele kolom; voor een grid moet dit anders */
+    text-align: center; /* Blijft goed */
+    text-decoration: none;
+    color: #333;
+    display: block; /* Zorgt dat de hele tegel klikbaar is */
+}
+
+.recept-link:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.recept-link h3 {
+    margin-top: 0;
+    color: #e63946; /* Kleur van de header in je style.css */
+}
+
+/* Grid layout voor receptenlijsten (optioneel) */
+.recepten-grid ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Ruimte tussen de grid items */
+}
+
+.recepten-grid li {
+    padding-left: 0; /* Reset padding als je geen custom bullets gebruikt hier */
+}
+.recepten-grid li::before {
+    content: none; /* Verwijder de custom bullet als die er was */
+}

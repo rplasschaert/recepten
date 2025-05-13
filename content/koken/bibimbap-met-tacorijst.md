@@ -23,7 +23,7 @@ ingredients:
   - 2 lente-uitjes, in dunne ringetjes
   - 1 handvol in reepjes gesneden ijsbergsla
   - 1 eidooier
-tags: ["koreaans", "rijst", "gehakt", "kimchi", "ei"] # Optioneel
+tags: ["koken", "koreaans", "rijst", "gehakt", "kimchi", "ei"] # Optioneel
 ---
 
 ## Instructies

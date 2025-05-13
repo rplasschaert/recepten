@@ -12,7 +12,7 @@ ingredients:
   - 1/4 theelepel zout
   - 1 zakje vanillesuiker (of 1 tl vanille-extract)
   - 200g chocoladestukjes (chocolate chips of gehakte chocolade)
-tags: ["brood", "cake", "banaan", "chocolade", "zoet"] # Optioneel
+tags: ["bakken", "brood", "cake", "banaan", "chocolade", "zoet"] # Optioneel
 ---
 
 ## Instructies

@@ -14,7 +14,7 @@ ingredients:
   - 1/2 el mosterd
   - 2 el ketjap
   - 2 tl kurkuma
-tags: ["kip", "indisch", "pittig", "kokosmelk"] # Optioneel
+tags: ["koken", "kip", "indisch", "pittig", "kokosmelk"] # Optioneel
 ---
 
 ## Instructies

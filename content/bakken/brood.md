@@ -7,7 +7,7 @@ ingredients:
   - 310 ml lauw water
   - 500 gram bloem (T65)
   - 12 gram zout
-tags: ["brood", "zuurdesem", "bakken"] # Optioneel
+tags: ["bakken", "brood", "zuurdesem", "bakken"] # Optioneel
 ---
 
 ## Instructies

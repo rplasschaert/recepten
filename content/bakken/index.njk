@@ -1,37 +1,62 @@
 ---
-title: "Bak Recepten"
-layout: "base.njk"
-permalink: /bakken/ # Genereert /bakken/index.html (schonere URL)
-eleventyComputed:
-  allRecipes: |
-    const mdRecipes = collections.all | getFilteredByGlob("content/bakken/*.md") | FilterOutCurrentPage(page); 
-    const jsonRecipes = bakRecepten ? bakRecepten : [];
-    const mappedMdRecipes = mdRecipes.map(item => ({ title: item.data.title, url: item.url, ingredients: item.data.ingredients || [], isExternal: false }));
-    const mappedJsonRecipes = jsonRecipes.filter(item => item.externalLink).map(item => ({ title: item.name, url: item.externalLink, ingredients: item.ingredients || [], isExternal: true }));
-    const combined = mappedMdRecipes.concat(mappedJsonRecipes);
-    combined.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
-    return combined;
+layout: _layouts/base.njk
+title: Bakrecepten
+permalink: /bakken/index.html
 ---
 
 <header>
-    <a href="/"><img src="/assets/images/home-icon.png" alt="Homepage" style="cursor: pointer; width: 50px; height: 50px;"></a>
-    <h1>{{ title }}</h1>
-    <input type="text" id="zoekBalk" placeholder="Zoek recept of ingrediënt..." style="width: 80%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ddd;">
+    <h1>Bakrecepten</h1>
 </header>
 
-<main id="receptenLijst">
-    {% if allRecipes and allRecipes.length %}
-        {% for recept in allRecipes %}
-            {% set ingredients_str = recept.ingredients | default([]) | join(', ') | lower %}
-            <a class="recept-link"
-               href="{{ recept.url | url }}"
-               data-ingredients="{{ ingredients_str }}"
-               {% if recept.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}>
-                {{ recept.title }}
-                {% if recept.isExternal %}<span style="font-size: 0.8em; opacity: 0.7;"> (extern)</span>{% endif %}
-            </a>
+<div id="receptenLijst" class="recepten-grid">
+
+    <h2>Recepten (uit Markdown)</h2>
+    {% if collections.bakken and collections.bakken.length > 0 %}
+        <ul>
+        {% for recept in collections.bakken %}
+            <li class="recept-link">
+                <a href="{{ recept.url | url }}">
+                    <h3>{{ recept.data.title }}</h3>
+                </a>
+                {% if recept.data.ingredients %}
+                    <p><strong>Ingrediënten:</strong> {{ recept.data.ingredients | join(", ") }}</p>
+                {% endif %}
+            </li>
         {% endfor %}
+        </ul>
     {% else %}
-        <p>Geen bakrecepten gevonden.</p>
+        <p>Geen bakrecepten gevonden in Markdown.</p>
     {% endif %}
-</main>
+
+    <h2>Externe en Snelle Recepten (uit JSON)</h2>
+    {% if data.bakkenRecepten and data.bakkenRecepten.length > 0 %}
+        <ul>
+        {% for recept in data.bakkenRecepten %}
+            <li class="recept-link">
+                {% if recept.externalLink %}
+                    <a href="{{ recept.externalLink }}" target="_blank" rel="noopener noreferrer">
+                        <h3>{{ recept.name }} (Extern)</h3>
+                    </a>
+                 {% elif recept.category == "bakken" %}
+                    {# Zoek het corresponderende markdown recept op basis van naam #}
+                    {% set mdRecipe = collections.bakken | FilterOutCurrentPage | find("data.title", recept.name) %}
+                    {% if mdRecipe %}
+                        <a href="{{ mdRecipe.url | url }}">
+                            <h3>{{ recept.name }}</h3>
+                        </a>
+                    {% else %}
+                        <h3>{{ recept.name }} (Link niet gevonden, controleer naam overeenkomst met .md bestand)</h3>
+                    {% endif %}
+                {% else %}
+                    <h3>{{ recept.name }}</h3>
+                {% endif %}
+                {% if recept.ingredients %}
+                    <p><strong>Ingrediënten:</strong> {{ recept.ingredients | join(", ") }}</p>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Geen extra bakrecepten gevonden in JSON.</p>
+    {% endif %}
+</div>
