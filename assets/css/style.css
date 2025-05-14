@@ -1,133 +1,127 @@
+/* Basisinstellingen voor HTML en Body */
+html {
+    height: 100%; /* Zorgt ervoor dat body 100% hoogte kan refereren */
+}
+
 body {
     font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #f8f8f8; /* Lichte achtergrond voor betere leesbaarheid */
+    color: #333; /* Standaard tekstkleur */
+    text-align: center; /* Centreert tekst standaard, kan per element overschreven worden */
+    line-height: 1.6; /* Verbeterde regelafstand voor leesbaarheid */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zorgt ervoor dat body minimaal de volledige schermhoogte inneemt */
 }
 
-header {
+/* Algemene header styling (kan .site-header zijn of een generieke header) */
+header, .site-header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Donkere achtergrond voor contrast */
+    color: #fff; /* Witte tekst op donkere achtergrond */
+    margin-bottom: 30px; /* Ruimte onder de header */
 }
 
+/* Styling voor de hoofdcontent van de pagina */
+main {
+    width: 100%; /* Maakt main schermvullend in de breedte */
+    max-width: 800px; /* Maximale breedte voor content voor betere leesbaarheid op grote schermen */
+    box-sizing: border-box; /* Zorgt dat padding en border binnen de width vallen */
+    margin: 30px auto; /* Ruimte boven/onder, en centreert de content horizontaal */
+    padding: 20px; /* Interne padding voor de content */
+    background-color: white; /* Witte achtergrond voor de content sectie */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    flex-grow: 1; /* Zorgt dat main de beschikbare verticale ruimte opvult */
+}
+
+/* Titels */
+h1 {
+    font-size: 2.5em; /* Grootte voor hoofdtitel (waarschijnlijk in header) */
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em; /* Grootte voor sectietitels */
+    margin-top: 30px; /* Ruimte boven sectietitels */
+    color: #333; /* Donkere kleur voor titels */
+}
+
+h3 {
+    font-size: 1.5em; /* Grootte voor sub-sectietitels (bijv. receptnamen in links) */
+    color: #000000; /* Accentkleur voor h3, zoals gebruikt in .recept-link h3 */
+    margin-top: 0; /* Geen extra top margin als het al in een container zit */
+}
+
+/* Zoekbalk styling */
 #zoekBalk {
-    width: 80%;
+    width: 80%; /* Relatieve breedte, past zich aan de parent (main) aan */
     padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    margin-top: 10px; /* Ruimte boven de zoekbalk */
+    margin-bottom: 20px; /* Ruimte onder de zoekbalk */
+    border-radius: 5px; /* Afgeronde hoeken */
+    border: 1px solid #ddd; /* Subtiele rand */
+    font-size: 1em;
 }
 
+/* Container voor de lijst met recepten (indien gebruikt) */
 #receptenLijst {
-    padding: 20px;
+    padding: 0; /* Padding wordt nu door .recepten-grid of .recept-link afgehandeld */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Styling voor individuele recept links/tegels */
 .recept-link {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    width: 80%;
+    border-radius: 8px; /* Afgeronde hoeken voor de tegels */
+    margin: 10px; /* Externe marge rondom elke tegel */
+    padding: 20px; /* Interne padding binnen elke tegel */
     text-align: center;
-    text-decoration: none;
-    color: #333;
+    text-decoration: none; /* Geen onderstreping voor links */
+    color: #333; /* Standaard tekstkleur voor links */
+    display: block; /* Maakt de hele tegel klikbaar */
+    transition: background-color 0.3s, border-color 0.3s; /* Vloeiende overgang voor hover effect */
 }
 
 .recept-link:hover {
-    background-color: #f0f0f0;
-}
-h2 {
-    font-size: 2em;
-    margin-top: 30px;
+    background-color: #f0f0f0; /* Lichtere achtergrond op hover */
+    border-color: #ccc; /* Iets donkerdere rand op hover */
 }
 
+/* Lijsten styling (voor ingrediënten en instructies) */
 ul, ol {
-    text-align: left; /* Align lists to the left for better readability */
-    margin: 20px 0;
-    padding: 0 20px;
-    list-style-type: none; /* Remove default bullets */
+    text-align: left; /* Linksuitlijning voor betere leesbaarheid van lijsten */
+    margin: 20px 0; /* Ruimte boven en onder lijsten */
+    padding: 0 0 0 40px; /* Padding aan de linkerkant voor opsommingstekens/nummers */
+    list-style-position: outside; /* Zorgt dat bullets/nummers buiten de tekstflow vallen */
+}
+
+ul {
+    list-style-type: disc; /* Standaard bolletjes voor ul */
+}
+
+ol {
+    list-style-type: decimal; /* Standaard nummering voor ol */
 }
 
 ul li, ol li {
-    margin-bottom: 10px; /* Add spacing between list items */
-    padding-left: 20px; /* Add padding for custom bullet style */
-    position: relative;
+    margin-bottom: 10px; /* Ruimte tussen lijst-items */
+    padding-left: 0; /* Geen extra padding-left hier, wordt door ul/ol afgehandeld */
+    position: relative; /* Nodig als je ::before/::after zou gebruiken voor custom bullets */
 }
 
 
-
-ol li {
-    counter-increment: step-counter;
-    padding-left: 40px;
-}
-
-ol li::before {
-    content: counter(step-counter) ".";
-    position: absolute;
-    left: 0;
-    color: #000000; /* Numbering color matches header */
-}
-/* General styling for the recipe page */
-body {
-    font-family: 'Merriweather', serif; /* Change font to a more suitable one */
-    text-align: center; /* Center-align all text */
-    background-color: #f8f8f8; /* Light background for better readability */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6; /* Improve line spacing */
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-main {
-    max-width: 800px; /* Limit width for readability */
-    margin: 0 auto; /* Center the main content */
-    padding: 20px; /* Add padding around the content */
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for a clean, elevated look */
-}
-
-h2 {
-    font-size: 2em;
-    margin-top: 30px;
-}
-
-
-button, img {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #e63946;
-    color: white;
-    cursor: pointer;
-}
 
 button:hover {
-    background-color: #d62828; /* Darken the button color on hover */
+    background-color: #d62828; /* Donkerdere tint op hover */
 }
 
+/* Specifieke Home knop (indien als afbeelding gebruikt) */
 img#homeButton {
     cursor: pointer;
     width: 60px;
@@ -135,79 +129,65 @@ img#homeButton {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-/* assets/css/style.css - Aanvullingen voor base.njk */
 
-/* Algemene site header styling */
-.site-header {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 30px; /* Iets meer padding voor een ruimere look */
-    text-align: center; /* Houd de algemene centrering, maar specifieke elementen kunnen anders uitgelijnd worden */
-}
-
+/* Header content binnen .site-header (voor flexbox layout) */
 .site-header .header-content {
-    display: flex; /* Gebruik flexbox voor betere uitlijning */
-    justify-content: space-between; /* Titel links, navigatie rechts (of centreer alles) */
+    display: flex;
+    justify-content: space-between; /* Titel links, navigatie rechts */
     align-items: center;
-    max-width: 1200px; /* Maximale breedte voor de content in de header */
-    margin: 0 auto; /* Centreer de header content */
+    max-width: 1200px; /* Maximale breedte voor de header-inhoud */
+    margin: 0 auto; /* Centreert de header-inhoud */
+    padding: 0 20px; /* Padding binnen de header-content, voorkomt dat elementen aan de rand plakken */
 }
 
-.site-header a#homeLink {
+.site-header a#homeLink { /* Link voor de home knop/titel */
     text-decoration: none;
     color: #fff;
     display: flex;
     align-items: center;
 }
 
-/* Titel van de site in de header */
-.site-title {
-    font-size: 1.8em; /* Grotere titel */
+.site-title { /* Titel van de site in de header */
+    font-size: 1.8em;
     font-weight: bold;
-    color: #fff;
+    /* color: #fff; wordt geërfd van a#homeLink of .site-header */
     text-decoration: none;
 }
 
-/* Home button icoon (als je een afbeelding gebruikt) */
-img#homeButtonIcon { /* Als je een icoon gebruikt ipv tekst */
-    width: 40px; /* Aanpassen aan je icoon */
+img#homeButtonIcon { /* Als je een icoon gebruikt voor de home knop */
+    width: 40px;
     height: 40px;
     margin-right: 10px; /* Ruimte tussen icoon en eventuele tekst */
 }
 
-/* Navigatie styling */
+/* Navigatie in de header */
 .site-nav ul {
-    list-style: none;
+    list-style: none; /* Geen opsommingstekens */
     padding: 0;
     margin: 0;
-    display: flex; /* Nav items naast elkaar */
+    display: flex; /* Navigatie-items naast elkaar */
 }
 
 .site-nav li {
-    margin-left: 20px; /* Ruimte tussen nav items */
+    margin-left: 20px; /* Ruimte tussen navigatie-items */
+}
+
+.site-nav li:first-child {
+    margin-left: 0; /* Geen marge voor het eerste item */
 }
 
 .site-nav a {
     color: #fff;
     text-decoration: none;
     font-size: 1em;
-    padding: 5px 10px;
+    padding: 5px 10px; /* Padding voor klikgebied */
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .site-nav a:hover,
-.site-nav a.active { /* Voor actieve pagina link, indien je dat implementeert */
-    background-color: #555;
-}
-
-/* Hoofdinhoud styling */
-main {
-    max-width: 800px; 
-    margin: 30px auto; /* Meer ruimte boven en onder de main content */
-    padding: 20px; 
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+.site-nav a.active { /* Styling voor actieve pagina link */
+    background-color: #555; /* Donkerdere achtergrond voor hover/actief */
 }
 
 /* Footer styling */
@@ -215,64 +195,46 @@ main {
     text-align: center;
     padding: 20px;
     margin-top: 40px; /* Ruimte boven de footer */
-    background-color: #333;
-    color: #ccc;
+    background-color: #333; /* Donkere achtergrond, consistent met header */
+    color: #ccc; /* Lichtere tekstkleur voor leesbaarheid */
     font-size: 0.9em;
 }
 
 .site-footer p {
-    margin: 0;
+    margin: 0; /* Geen extra marge voor paragraaf in footer */
 }
 
-/* Zorgt ervoor dat de body minimaal de hoogte van het scherm inneemt,
-   en de footer onderaan blijft, zelfs bij weinig content. */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Grid layout voor receptenlijsten (bijv. op categoriepagina's) */
+.recepten-grid {
+    /* De ul binnen .recepten-grid krijgt de grid styling */
+    padding: 20px 0; /* Padding rondom het grid */
 }
 
-main {
-    flex-grow: 1; /* Zorgt dat de main content de beschikbare ruimte vult */
-}
-
-
-/* Je bestaande .recept-link styling kan hieronder blijven of geïntegreerd worden */
-.recept-link {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    /* width: 80%; /* Dit was voor een enkele kolom; voor een grid moet dit anders */
-    text-align: center; /* Blijft goed */
-    text-decoration: none;
-    color: #333;
-    display: block; /* Zorgt dat de hele tegel klikbaar is */
-}
-
-.recept-link:hover {
-    background-color: #f0f0f0;
-    border-color: #ccc;
-}
-
-.recept-link h3 {
-    margin-top: 0;
-    color: #e63946; /* Kleur van de header in je style.css */
-}
-
-/* Grid layout voor receptenlijsten (optioneel) */
 .recepten-grid ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Reset margin voor de ul zelf */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Ruimte tussen de grid items */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid kolommen */
+    gap: 20px; /* Ruimte tussen de grid items (recept-links) */
+}
+.recepten-grid a {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Reset margin voor de ul zelf */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid kolommen */
+    gap: 20px; /* Ruimte tussen de grid items (recept-links) */
 }
 
+/* .recepten-grid li wordt direct de grid item, dus .recept-link is het kind */
 .recepten-grid li {
-    padding-left: 0; /* Reset padding als je geen custom bullets gebruikt hier */
+    padding-left: 0; /* Reset padding, de .recept-link heeft zijn eigen padding */
+    margin-bottom: 0; /* gap handelt de spacing af */
+    /* list-style-type: none; is al gezet op .recepten-grid ul */
 }
+
+/* Verwijder ::before indien die per ongeluk overerfd zou worden op li in grid */
 .recepten-grid li::before {
-    content: none; /* Verwijder de custom bullet als die er was */
+    content: none;
 }
