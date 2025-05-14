@@ -7,12 +7,12 @@ permalink: /koken/index.html
 <header>
     <h1>Kookrecepten</h1>
     {# Eventueel hier je zoekBalk HTML #}
-    {# <input type="search" id="zoekBalk" placeholder="Zoek op naam of ingrediënt..."> #}
+    <input type="search" id="zoekBalk" placeholder="Zoek op naam of ingrediënt..."> 
 </header>
 
 <div id="receptenLijstContainer"> {# Optionele container, de ID receptenLijst wordt niet meer direct gebruikt door het script om te vullen #}
 
-    <h2>Recepten (uit Markdown)</h2>
+    <h2>Recepten</h2>
     {% if collections.koken and collections.koken.length > 0 %}
         <ul class="recepten-grid"> {# Gebruik een class voor styling van de lijst #}
         {% for recept in collections.koken %}
@@ -21,9 +21,9 @@ permalink: /koken/index.html
                 <a href="{{ recept.url | url }}">
                     <h3>{{ recept.data.title }}</h3>
                 </a>
-                {% if recept.data.ingredients and recept.data.ingredients.length > 0 %}
+                {# {% if recept.data.ingredients and recept.data.ingredients.length > 0 %}
                     <p><strong>Ingrediënten:</strong> {{ recept.data.ingredients | join(", ") }}</p>
-                {% endif %}
+                {% endif %} #}
             </li>
         {% endfor %}
         </ul>
@@ -31,15 +31,15 @@ permalink: /koken/index.html
         <p>Geen kookrecepten gevonden in Markdown.</p>
     {% endif %}
 
-    <h2>Externe en Snelle Recepten (uit JSON)</h2>
-    {% if data.kokenRecepten and data.kokenRecepten.length > 0 %}
+    <h2>Externe Recepten</h2>
+    {% if kokenRecepten and kokenRecepten.length > 0 %}
         <ul class="recepten-grid"> {# Gebruik een class voor styling van de lijst #}
-        {% for recept_json in data.kokenRecepten %}
+        {% for recept_json in kokenRecepten %}
             {# Het li element krijgt de class 'recept-link' en het data-ingredients attribuut #}
             <li class="recept-link" data-ingredients="{{ recept_json.ingredients | join(', ') | lower }}">
                 {% if recept_json.externalLink %}
                     <a href="{{ recept_json.externalLink }}" target="_blank" rel="noopener noreferrer">
-                        <h3>{{ recept_json.name }} (Extern)</h3>
+                        <h3>{{ recept_json.name }}</h3>
                     </a>
                 {% elif recept_json.category == "koken" %}
                     {% set mdRecipe = collections.koken | find("data.title", recept_json.name) %}
@@ -53,9 +53,9 @@ permalink: /koken/index.html
                 {% else %}
                      <h3>{{ recept_json.name }}</h3>
                 {% endif %}
-                {% if recept_json.ingredients and recept_json.ingredients.length > 0 %}
+                {# {% if recept_json.ingredients and recept_json.ingredients.length > 0 %}
                     <p><strong>Ingrediënten:</strong> {{ recept_json.ingredients | join(", ") }}</p>
-                {% endif %}
+                {% endif %} #}
             </li>
         {% endfor %}
         </ul>

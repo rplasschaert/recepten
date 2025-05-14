@@ -10,7 +10,7 @@ permalink: /bakken/index.html
 
 <div id="receptenLijst" class="recepten-grid">
 
-    <h2>Recepten (uit Markdown)</h2>
+    <h2>Recepten</h2>
     {% if collections.bakken and collections.bakken.length > 0 %}
         <ul>
         {% for recept in collections.bakken %}
@@ -18,9 +18,9 @@ permalink: /bakken/index.html
                 <a href="{{ recept.url | url }}">
                     <h3>{{ recept.data.title }}</h3>
                 </a>
-                {% if recept.data.ingredients %}
+                {# {% if recept.data.ingredients %}
                     <p><strong>Ingrediënten:</strong> {{ recept.data.ingredients | join(", ") }}</p>
-                {% endif %}
+                {% endif %} #}
             </li>
         {% endfor %}
         </ul>
@@ -28,14 +28,14 @@ permalink: /bakken/index.html
         <p>Geen bakrecepten gevonden in Markdown.</p>
     {% endif %}
 
-    <h2>Externe en Snelle Recepten (uit JSON)</h2>
-    {% if data.bakkenRecepten and data.bakkenRecepten.length > 0 %}
+    <h2>Externe Recepten </h2>
+    {% if bakkenRecepten and bakkenRecepten.length > 0 %}
         <ul>
-        {% for recept in data.bakkenRecepten %}
+        {% for recept in bakkenRecepten %}
             <li class="recept-link">
                 {% if recept.externalLink %}
                     <a href="{{ recept.externalLink }}" target="_blank" rel="noopener noreferrer">
-                        <h3>{{ recept.name }} (Extern)</h3>
+                        <h3>{{ recept.name }} </h3>
                     </a>
                  {% elif recept.category == "bakken" %}
                     {# Zoek het corresponderende markdown recept op basis van naam #}
@@ -50,9 +50,9 @@ permalink: /bakken/index.html
                 {% else %}
                     <h3>{{ recept.name }}</h3>
                 {% endif %}
-                {% if recept.ingredients %}
+                {# {% if recept.ingredients %}
                     <p><strong>Ingrediënten:</strong> {{ recept.ingredients | join(", ") }}</p>
-                {% endif %}
+                {% endif %} #}
             </li>
         {% endfor %}
         </ul>

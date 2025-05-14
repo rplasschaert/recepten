@@ -9,7 +9,6 @@ module.exports = function(eleventyConfig) {
   const outputDir = "_site";  // Map voor de gegenereerde site
   const includesDir = "_includes";
   const dataDir = "_data";
-  const fs = require('fs');
   const pathPrefix = process.env.NODE_ENV === 'production' ? "/recepten/" : "/";
   // const contentDir = "content"; // Deze contentDir is niet standaard hier
 
@@ -22,16 +21,16 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("FilterOutCurrentPage", (collection, currentPage) => {
     if (!currentPage || !currentPage.inputPath) { return collection; }
     return collection.filter(item => item.inputPath !== currentPage.inputPath);
-  });
+    });
   return {
-      dir: {
-        input: ".",
-        output: "_site",
-        includes: "_includes", // Directe string waarde
-        data: "_data",         // Directe string waarde
-      },
-      htmlTemplateEngine: "njk",
-      markdownTemplateEngine: "njk",
-      passthroughFileCopy: true
-    };
+    dir: {
+      input: ".",
+      output: "_site",
+      includes: "_includes", // Directe string waarde
+      data: "_data",         // Directe string waarde
+    },
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    passthroughFileCopy: true
+  };
 };
