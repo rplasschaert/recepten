@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
   const includesDir = "_includes";
   const dataDir = "_data";
   const fs = require('fs');
+  const pathPrefix = process.env.NODE_ENV === 'production' ? "/recepten/" : "/";
   // const contentDir = "content"; // Deze contentDir is niet standaard hier
 
   // Kopieer statische assets (CSS, JS, Images) naar de output map
