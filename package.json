@@ -2,7 +2,7 @@
     "name": "recepten",
     "version": "1.0.0",
     "description": "Mijn receptenwebsite",
-    "main": "index.njk",
+    "main": "/content/index.njk",
     "scripts": {
         "start": "eleventy --serve",
         "build": "eleventy"
