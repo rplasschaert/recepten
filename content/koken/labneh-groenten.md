@@ -31,12 +31,12 @@ tags: ["koken", "koreaans", "rijst", "gehakt", "kimchi", "ei"] # Optioneel
 ## Instructies
 
 1. Verwarm de oven voor op 200 °C (heteluchtstand).
-2. Snijd de courgette in de lengte middendoor en daarna in plakjes van 5 millimeter. Snijd de wortelen in schuine plakken van 4 à 5 millimeter. Verdeel de bloemkool in kleine roosjes. Pel de rode ui en snijd in 8 partjes.
-3. Doe de groenten in een grote kom en meng er wat rijstolie, komijnpoeder en za'atar door. Kruid met peper en zout. Verdeel over de bakplaat. Zet in de oven en rooster 20 minuten tot de groenten bijna gaar zijn.
-4. Kook ondertussen de eieren 6,5 à 7 minuten tot het eigeel nog wat zacht is. Laat ze schrikken in koud water.
-5. Maak de kruidenolie. Giet de olijfolie in de mengkom van de groenten en roer er het gerookt paprikapoeder, de chilivlokken en het grof zeezout bij. Spoel de citroen. Rasp de zeste van een halve citroen bij de olie. Pers er wat citroensap bij. Pel de knoflook, verwijder de kern en pers uit bij de olie. Meng door elkaar. Laat even staan, zodat alle smaken zich kunnen vermengen. Kruid bij naar smaak.
-6. Pel de eieren. Hak de muntblaadjes.
-7. Lepel de labneh op een grote serveerschaal en verdeel in een gelijkmatige laag. Kruid met zwarte peper. Labneh is al gezouten. Gebruik je yoghurt? Voeg dan wat zout toe.
-8. Verdeel de pistachenoten en amandelschilfers over de groenten en rooster nog 5 à 10 minuten tot de groenten gaar en goudbruin zijn en de noten beginnen te kleuren.
-9. Rooster het platbrood volgens de aanwijzingen op de verpakking.
+2. Snijd de **courgette** in de lengte middendoor en daarna in plakjes van 5 millimeter. Snijd de **wortelen** in schuine plakken van 4 à 5 millimeter. Verdeel de **bloemkool** in kleine roosjes. Pel de rode ui en snijd in 8 partjes.
+3. Doe de groenten in een grote kom en meng er wat **rijstolie**, **komijnpoeder** en **za'atar** door. Kruid met peper en zout. Verdeel over de bakplaat. Zet in de oven en rooster 20 minuten tot de groenten bijna gaar zijn.
+4. Kook ondertussen de **eieren** 6,5 à 7 minuten tot het eigeel nog wat zacht is. Laat ze schrikken in koud water.
+5. Maak de kruidenolie. Giet de **olijfolie** in de mengkom van de groenten en roer er het gerookt **paprikapoeder**, de **chilivlokken** en het grof **zeezout** bij. Spoel de **citroen**. Rasp de zeste van een halve **citroen** bij de olie. Pers er wat **citroensap** bij. Pel de **knoflook**, verwijder de kern en pers uit bij de olie. Meng door elkaar. Laat even staan, zodat alle smaken zich kunnen vermengen. Kruid bij naar smaak.
+6. Pel de **eieren**. Hak de **muntblaadjes**.
+7. Lepel de **labneh** op een grote serveerschaal en verdeel in een gelijkmatige laag. Kruid met zwarte peper. **Labneh** is al gezouten. Gebruik je yoghurt? Voeg dan wat zout toe.
+8. Verdeel de **pistachenoten** en **amandelschilfers** over de groenten en rooster nog 5 à 10 minuten tot de groenten gaar en goudbruin zijn en de noten beginnen te kleuren.
+9. Rooster het **platbrood** volgens de aanwijzingen op de verpakking.
 10. Verdeel de groenten over de labneh, werk af met de gehalveerde eieren en munt en lepel er een groot deel van de olie over. Schep altijd goed de onderste laag uit de olie, want de smaakmakers zinken naar de bodem.
