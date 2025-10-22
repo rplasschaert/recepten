@@ -32,20 +32,6 @@
         ]
     },
     {
-        "name": "Bananenbrood",
-        "ingredients": [
-            "banaan",
-            "chocolade"
-        ]
-    },
-    {
-        "name": "Brood",
-        "ingredients": [
-            "bloem",
-            "zuurdesem"
-        ]
-    },
-    {
         "name": "Carrotcake",
         "externalLink": "https://www.inspiredtaste.net/25753/carrot-cake-recipe/#itr-recipe-25753",
         "ingredients": [
@@ -53,13 +39,6 @@
             "taart",
             "cake",
             "noten"
-        ]
-    },
-    {
-        "name": "ChocolateChipCookies",
-        "ingredients": [
-            "bloem",
-            "zuurdesem"
         ]
     }
 
