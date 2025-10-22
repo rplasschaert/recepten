@@ -14,7 +14,7 @@ ingredients:
   - 50 gram pure-chocoladecouverture
   - 40 gram hazelnoten, grof gehakt
   - 50 gram witte basterdsuiker
-  - 30 gram hazelnootpasta (als in: pindakaas van hazelnoten, geen Nutella)  
+  - 30 gram hazelnootpasta (als in; pindakaas van hazelnoten, geen Nutella)  
 tags: ["bakken", "brood", "zuurdesem", "bakken"] # Optioneel
 ---
 
