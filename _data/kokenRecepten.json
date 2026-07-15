@@ -1,15 +1,5 @@
 [
-    {
-        "name": "Kung Pao Chicken",
-        "externalLink": "https://www.recipetineats.com/kung-pao-chicken/#wprm-recipe-container-25341",
-        "ingredients": [
-            "shaoxing",
-            "kip",
-            "knoflook",
-            "rijst"
-        ]
-    },
-    {
+        {
         "name": "Vegetarische lasagne met courgette en spinazie",
         "externalLink": "https://www.hellofresh.nl/recipes/vegetarische-lasagne-met-courgette-en-spinazie-621783fd97c086443e06ee34",
         "ingredients": [
@@ -25,7 +15,7 @@
         ]
     },
     {
-        "name": "Indonesische rendang",
+        "name": "rendang",
         "externalLink": "https://www.leukerecepten.nl/recepten/basisrecept-indonesische-rendang/",
         "ingredients": [
             "boemboe voor rendang",
@@ -100,18 +90,6 @@
             "tauge ",
             "eieren",
             "sojasaus"
-        ] 
-    },
-    {
-        "name": "Ravioli met spinazie",
-        "externalLink": "https://www.hellofresh.nl/recipes/ravioli-in-romige-spinaziesaus-5d70f37d9ef28c00160b34e3",
-        "ingredients": [
-            "Cherrytomaten",
-            "Spekblokjes",
-            "Spinazie",
-            "limoen",
-            "ravioli ",
-            "room"
         ] 
     },
     {
@@ -264,16 +242,6 @@
     },{
         "name": "Miso ramen",
         "externalLink": "https://www.andy-cooks.com/blogs/recipes/miso-ramen",
-        "ingredients": [
-            "miso",
-            "ramen",
-            "noodles",
-            "Ui",
-            "shiitake"
-        ]
-    },{
-        "name": "Burrito’s met Pulled Chicken",
-        "externalLink": "https://mexicankitchen.nl/burritos/burritos-met-pulled-chicken/",
         "ingredients": [
             "miso",
             "ramen",
