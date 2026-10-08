@@ -14,7 +14,7 @@ ingredients:
   - 1/2 el mosterd
   - 2 el ketjap
   - 2 tl kurkuma
-  - /+ de smashed komkommer salade
+  - + de smashed komkommer salade
 tags: ["koken", "kip", "indisch", "pittig", "kokosmelk"] # Optioneel
 ---
 [Smashed komkommer salade](https://thewoksoflife.com/smashed-asian-cucumber-salad/#recipe)
