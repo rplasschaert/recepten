@@ -14,10 +14,10 @@ ingredients:
   - 1/2 el mosterd
   - 2 el ketjap
   - 2 tl kurkuma
-  - [Smashed komkommer salade](https://thewoksoflife.com/smashed-asian-cucumber-salad/#recipe)
+  - /+ de smashed komkommer salade
 tags: ["koken", "kip", "indisch", "pittig", "kokosmelk"] # Optioneel
 ---
-
+[Smashed komkommer salade](https://thewoksoflife.com/smashed-asian-cucumber-salad/#recipe)
 ## Instructies
 
 1.  Snijd de rode ui en de rode peper in halve ringen.
