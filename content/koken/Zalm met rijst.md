@@ -1,5 +1,5 @@
 ---
-title: Salmon no foil yaki
+title: Salmon foil yaki
 layout: recept.njk
 category: koken
 categorie: vis
