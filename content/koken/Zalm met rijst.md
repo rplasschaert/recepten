@@ -4,14 +4,14 @@ layout: recept.njk
 category: koken
 categorie: vis
 ingredients:
-  - 2 zalmfilets (~100 g per stuk)
+  - 2 zalmfilets zonder huid (~100 g per stuk)
   - 125 g gemengde paddenstoelen, gesneden (bijv. enoki, shiitake of kastanjechampignons)
   - Zeekraal
   - 1 1/2 el boter
   - 2 el sojasaus
   - Zout en  zwarte peper
   - Fijngesneden lente-ui
-  - rijst, om te serveren
+  - rijst
 tags: ["koken", "vis", "zalm", "japans", "ovenschotel"] # Optioneel
 ---
  
