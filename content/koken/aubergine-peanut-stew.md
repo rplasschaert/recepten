@@ -1,5 +1,5 @@
 ---
-title: Mabo Nasu
+title: Aubergine Peanut stew
 layout: recept.njk
 category: koken
 ingredients:
